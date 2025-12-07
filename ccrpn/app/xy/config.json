@@ -10,7 +10,7 @@
       "settings": {
         "clients": [
           {
-            "id": "UUID" // 注意: 这个UUID会在entrypoint.sh中被替换
+            "id": "UUID", // 注意: 这个UUID会在entrypoint.sh中被替换
             "flow": "xtls-rprx-vision"
           }
         ],
