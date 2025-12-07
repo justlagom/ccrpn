@@ -1,8 +1,6 @@
 {
   "log": {
-    "loglevel": "warning",
-    "access": "none",
-    "error": ""
+    "loglevel": "warning"
   },
   "inbounds": [
     {
@@ -13,7 +11,6 @@
         "clients": [
           {
             "id": "UUID" // 注意: 这个UUID会在entrypoint.sh中被替换
-            "email": "user@example.com",
             "flow": "xtls-rprx-vision"
           }
         ],
@@ -23,48 +20,26 @@
       },
       "streamSettings": {
         "network": "xhttp",
-        "security": "none",
         "xhttpSettings": {
           "host": "",
           "mode": "auto",
           "path": "/b4386f03"
         }
+        "security": "none",
       },
       "sniffing": {
+        "enabled": true,
         "destOverride": [
           "http",
           "tls",
-          "quic",
-          "fakedns"
-        ],
-        "enabled": true
-      },
-      "tag": "vless-inbound"
+          "quic"
+        ]
+      }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "tag": "blocked"
+      "protocol": "freedom"
     }
-  ],
-  "routing": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "type": "field",
-        "ip": ["geoip:private"],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "protocol": ["bittorrent"],
-        "outboundTag": "blocked"
-      }
-    ]
-  }
+  ]
 }
