@@ -1,5 +1,5 @@
 -----
-# 🚀 Koyebne - ENC+Vioion-WS-TLS-CDN 代理节点
+# 🚀 Koyebne - ENC+Vioion-WS-ARGO 代理节点
 
 [](https://github.com/justlagom/ccrpn)
 [](https://www.google.com/search?q=https://app.koyeb.com/deploy%3Fname%3Dkoyebne%26type%3Dgit%26repository%3Dgithub.com/justlagom/koyebne%26branch%3Dmain%26env%5BENC_CONFIG%5D%3D)
