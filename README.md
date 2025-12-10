@@ -31,3 +31,33 @@
 | **`UUID`** | 自定义uuid-必需 | `5936acb6-e65e-4631-bedf-ce723a1a375d` |
 | **`PROXY_PATH`** | 自定义path-必需 | `/5936acb6` |
 | **`DOMAIN`** | 容器域名(首次部署后可见)-必需 | `xxx.xxx.com` |
+
+-----
+
+## 🛠️ 本地开发与测试
+
+如果您需要本地测试，请确保您已安装 Docker 环境：
+
+```bash
+# 克隆项目
+git clone https://github.com/justlagom/hfne.git
+cd hfne
+
+# (可选) 在本地创建一个 .env 文件来设置您的 ENC_CONFIG
+
+# 构建 Docker 镜像
+docker build -t hfne:latest .
+
+# 运行容器 (替换为您的配置)
+docker run -d -p 8080:8080 \
+  -e ENC_CONFIG='{"uuid": "your-uuid", "path": "/testpath", "port": 8080}' \
+  hfne:latest
+```
+
+## 📄 License
+
+该项目基于 **MIT License** 发布。
+
+-----
+
+希望这份 README 能够清晰地展示您的项目！
